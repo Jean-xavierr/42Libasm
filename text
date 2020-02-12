@@ -1,0 +1,5 @@
+commande compilation :
+
+nasm -f macho64 name.asm
+gcc main.c name.o
+./a.out
