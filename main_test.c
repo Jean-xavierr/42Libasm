@@ -6,7 +6,7 @@
 /*   By: jereligi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 11:15:56 by jereligi          #+#    #+#             */
-/*   Updated: 2020/02/19 11:42:06 by jereligi         ###   ########.fr       */
+/*   Updated: 2020/02/19 15:48:46 by jereligi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,4 +76,42 @@ int			main(void)
 	printf("|%zd|\n\n", strlen("test"));
 
 
-}
+	printf("============================================\n");
+	printf("================ Ft_strcmp =================\n");
+	printf("============================================\n\n");
+	printf("\033[36mresultat : libasm\033[00m\n");
+	printf("|%d|\n", ft_strcmp("Hello", "Hello"));
+	printf("\033[36mresultat : libc\033[00m\n");
+	printf("|%d|\n\n", strcmp("Hello", "Hello"));
+	printf("\033[36mresultat : libasm\033[00m\n");
+	printf("|%d|\n", ft_strcmp("abcd", "abce"));
+	printf("\033[36mresultat : libc\033[00m\n");
+	printf("|%d|\n\n", strcmp("abcd", "abce"));
+	printf("\033[36mresultat : libasm\033[00m\n");
+	printf("|%d|\n", ft_strcmp("testzpxl", "testypol"));
+	printf("\033[36mresultat : libc\033[00m\n");
+	printf("|%d|\n\n", strcmp("testzpxl", "testypol"));
+
+
+	char	str1[] = "Bonjour";
+	char	str2[] = "Hello";
+	char	str3[] = "libc most power full";
+	char	str4[] = "libasm is for the ";
+	char	str5[] = "petit";
+	char	str6[] = "grand";
+	printf("============================================\n");
+	printf("================ Ft_strcpy =================\n");
+	printf("============================================\n\n");
+	printf("\033[36mresultat : libasm\033[00m\n");
+	printf("|%s|\n", ft_strcpy(str1, str2));
+	printf("\033[36mresultat : libc\033[00m\n");
+	printf("|%s|\n\n", strcpy(str1, str2));
+	printf("\033[36mresultat : libasm\033[00m\n");
+	printf("|%s|\n", ft_strcpy(str3, str4));
+	printf("\033[36mresultat : libc\033[00m\n");
+	printf("|%s|\n\n", strcpy(str3, str4));
+	printf("\033[36mresultat : libasm\033[00m\n");
+	printf("|%s|\n", ft_strcpy(str5, str6));
+	printf("\033[36mresultat : libc\033[00m\n");
+	printf("|%s|\n\n", strcpy(str5, str6));
+}	

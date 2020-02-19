@@ -1,7 +1,7 @@
 global _ft_strlen
 
 _ft_strlen:
-	xor		eax, eax 	; Could use "mov rax, 0" easier to understand but takes more memory (rax is the return value of the assembler program)
+	mov		rax, 0		; init rax to 0
 	jmp		loop_count  ; jump to count function
 
 loop_count:
