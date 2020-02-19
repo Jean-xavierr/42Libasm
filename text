@@ -3,3 +3,9 @@ commande compilation :
 nasm -f macho64 name.asm
 gcc main.c name.o
 ./a.out
+
+
+source :
+https://cs.lmu.edu/~ray/notes/nasmtutorial/
+https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+https://www.tutorialspoint.com/assembly_programming/assembly_system_calls.htm
