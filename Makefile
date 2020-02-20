@@ -6,11 +6,13 @@
 #    By: jereligi <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/02/20 12:01:33 by jereligi          #+#    #+#              #
-#    Updated: 2020/02/20 12:57:41 by jereligi         ###   ########.fr        #
+#    Updated: 2020/02/20 13:16:57 by jereligi         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libasm
+
+NAME_LIB = libasm.a
 
 SRCS = 	ft_write.s \
 		ft_read.s \
@@ -21,7 +23,7 @@ SRCS = 	ft_write.s \
 
 CC = gcc
 
-CFLAGS = -Wall -Wetra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 NASM = nasm
 
@@ -35,12 +37,16 @@ OBJ = $(SRCS:.s=.o)
 all : $(NAME)
 
 $(NAME) : $(OBJ)
-	ar rcs libasm.a $(OBJ)
+	ar rcs $(NAME_LIB) $(OBJ)
+
+ccproject :
+	$(CC) $(CFLAGS) main.c $(NAME_LIB)
 	
 clean :
 	rm -f $(OBJ)
 
 fclean : clean
-	rm -f libasm.a
+	rm -f $(NAME_LIB)
+	rm -f ./a.out
 
 re : fclean all
